@@ -20,7 +20,7 @@ body {
 
 /* ---------- Header ----------- */
 .header {
-  background-image: linear-gradient(to right bottom, #5866ffb4, #ff924fb4),
+  background-image: linear-gradient(to right bottom, #4eb9dde0, #52ff4fe0),
     url(./img/foss.jpg);
   height: 95vh;
   position: relative;
@@ -35,6 +35,31 @@ body {
 }
 
 .logo {
-  height: 3.5rem;
-  width: 3.5rem;
+  height: 3rem;
+  width: 3rem;
+}
+.header-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.header-text-up,
+.header-text-down {
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+}
+.header-text-up {
+  font-family: var(--font-Lato);
+  font-weight: 700;
+  font-size: 80px;
+  letter-spacing: 1.7rem;
+}
+.header-text-down {
+  font-family: var(--font-Lato);
+  font-weight: 400;
+  font-size: 30px;
+  letter-spacing: 0.5rem;
 }
