@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --font-Lato: "Lato", sans-serif;
+}
+body {
+  font-family: var(--font-Lato);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+}
