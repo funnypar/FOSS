@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Splash&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +8,7 @@
 
 :root {
   --font-Lato: "Lato", sans-serif;
+  --font-Pacifico: "Pacifico", cursive;
   --radius: 1rem;
 }
 
@@ -49,6 +52,7 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 .header-text-up,
 .header-text-down {
@@ -70,6 +74,7 @@ body {
   font-weight: 400;
   font-size: 30px;
   letter-spacing: 0.5rem;
+  margin-bottom: 70px;
 
   animation: header-text-down 2s;
 }
@@ -105,5 +110,42 @@ body {
   100% {
     transform: translate(0);
     opacity: 1;
+  }
+}
+
+.btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: var(--font-Pacifico);
+  display: inline-block;
+  border-radius: 100px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s;
+
+  animation: header-btn 2s;
+}
+.btn-black:visited,
+.btn-black {
+  background-color: #000;
+  padding: 15px 45px;
+  color: #fff;
+}
+.btn:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  /* transform: scale(1.05); */
+}
+.btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes header-btn {
+  from {
+    opacity: 0;
+    transform: translateY(500px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
   }
 }
