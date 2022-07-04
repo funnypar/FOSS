@@ -6,6 +6,7 @@
 
 :root {
   --font-Lato: "Lato", sans-serif;
+  --radius: 1rem;
 }
 
 body {
@@ -24,6 +25,7 @@ body {
     url(./img/foss.jpg);
   height: 95vh;
   position: relative;
+  border-radius: 1rem 1rem 0 0;
 
   clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
 }
@@ -37,6 +39,10 @@ body {
 .logo {
   height: 3rem;
   width: 3rem;
+  transition: all 2s;
+}
+.logo:hover {
+  opacity: 0;
 }
 .header-text {
   position: absolute;
@@ -56,10 +62,48 @@ body {
   font-weight: 700;
   font-size: 80px;
   letter-spacing: 1.7rem;
+
+  animation: header-text-up 2s;
 }
 .header-text-down {
   font-family: var(--font-Lato);
   font-weight: 400;
   font-size: 30px;
   letter-spacing: 0.5rem;
+
+  animation: header-text-down 2s;
+}
+
+@keyframes header-text-up {
+  0% {
+    transform: translateX(-500px);
+    /* transform: scale(10); */
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(10px);
+    opacity: 0.8;
+    /* transform: scale(1); */
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes header-text-down {
+  0% {
+    transform: translateX(500px);
+    /* transform: scale(10); */
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(-10px);
+    opacity: 0.8;
+    /* transform: scale(1); */
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
 }
