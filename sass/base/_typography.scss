@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Splash&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+body {
+  font-family: $--font-Lato;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  padding: 30px;
+}
+
+.heading-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  &-up,
+  &-down {
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    color: $--color-black;
+  }
+
+  &-up {
+    font-family: $--font-Lato;
+    font-weight: 700;
+    font-size: 80px;
+    letter-spacing: 1.7rem;
+
+    animation: header-text-up 2s;
+  }
+
+  &-down {
+    font-family: $--font-Lato;
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 0.5rem;
+    margin-bottom: 70px;
+
+    animation: header-text-down 2s;
+  }
+}

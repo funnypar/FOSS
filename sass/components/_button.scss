@@ -1,0 +1,45 @@
+.btn,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: $--font-Pacifico;
+  display: inline-block;
+  border-radius: 100px;
+  box-shadow: 0 10px 20px rgba($--color-black, 0.3);
+  transition: all 0.2s;
+  animation: header-btn 2s ease-out 0.5s;
+  animation-fill-mode: backwards;
+  background-color: $--color-black;
+  padding: 15px 45px;
+  color: $--color-white;
+  position: relative;
+}
+
+& .btn:hover {
+  box-shadow: 0 10px 20px rgba($--color-black, 0.6);
+  transform: translateY(-3px);
+
+  & .btn::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+  }
+}
+
+& .btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 5px 10px rgba($--color-black, 0.6);
+}
+
+& .btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+  background: $--color-black;
+}

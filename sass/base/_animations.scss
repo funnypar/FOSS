@@ -1,0 +1,40 @@
+@keyframes header-text-up {
+  0% {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(10px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes header-text-down {
+  0% {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(-10px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes header-btn {
+  from {
+    opacity: 0;
+    transform: translateY(500px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

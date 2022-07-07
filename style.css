@@ -1,11 +1,57 @@
 @import url("https://fonts.googleapis.com/css2?family=Splash&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@keyframes header-text-up {
+  0% {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(10px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes header-text-down {
+  0% {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(-10px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes header-btn {
+  from {
+    opacity: 0;
+    transform: translateY(500px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+}
 
 body {
   font-family: "Lato", sans-serif;
@@ -13,114 +59,101 @@ body {
   font-size: 16px;
   line-height: 1.7;
   padding: 30px;
-  box-sizing: border-box; }
+}
 
-/* =================================================== Start  my css =======================================*/
-/* ---------- Header ----------- */
+.heading-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.heading-text-up,
+.heading-text-down {
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+}
+.heading-text-up {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 80px;
+  letter-spacing: 1.7rem;
+  animation: header-text-up 2s;
+}
+.heading-text-down {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  letter-spacing: 0.5rem;
+  margin-bottom: 70px;
+  animation: header-text-down 2s;
+}
+
+.btn,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "Pacifico", cursive;
+  display: inline-block;
+  border-radius: 100px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s;
+  animation: header-btn 2s ease-out 0.5s;
+  animation-fill-mode: backwards;
+  background-color: #000;
+  padding: 15px 45px;
+  color: #fff;
+  position: relative;
+}
+
+.btn:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  transform: translateY(-3px);
+}
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+  background: #000;
+}
+
 .header {
-  background-image: linear-gradient(to right bottom, #4eb9dde0, #52ff4fe0), url(./img/foss.jpg);
+  background-image: linear-gradient(to right bottom, #4eb9dde0, #52ff4fe0),
+    url(./img/foss.jpg);
   height: 95vh;
   position: relative;
   border-radius: 1rem 1rem 0 0;
-  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%); }
-  .header .img-logo {
-    position: absolute;
-    top: 30px;
-    left: 40px; }
-    .header .img-logo .logo {
-      height: 3rem;
-      width: 3rem;
-      transition: all 2s; }
-      .header .img-logo .logo:hover {
-        opacity: 0; }
-  .header .header-text {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
-    .header .header-text .header-text-up,
-    .header .header-text .header-text-down {
-      display: block;
-      text-transform: uppercase;
-      text-align: center;
-      color: #000; }
-    .header .header-text .header-text-up {
-      font-family: "Lato", sans-serif;
-      font-weight: 700;
-      font-size: 80px;
-      letter-spacing: 1.7rem;
-      animation: header-text-up 2s; }
-    .header .header-text .header-text-down {
-      font-family: "Lato", sans-serif;
-      font-weight: 400;
-      font-size: 30px;
-      letter-spacing: 0.5rem;
-      margin-bottom: 70px;
-      animation: header-text-down 2s; }
-    .header .header-text .btn,
-    .header .header-text .btn:visited {
-      text-transform: uppercase;
-      text-decoration: none;
-      font-family: "Pacifico", cursive;
-      display: inline-block;
-      border-radius: 100px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-      transition: all 0.2s;
-      animation: header-btn 2s ease-out 0.5s;
-      animation-fill-mode: backwards;
-      background-color: #000;
-      padding: 15px 45px;
-      color: #fff;
-      position: relative; }
-    .header .header-text .btn:hover {
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
-      transform: translateY(-3px); }
-      .header .header-text .btn:hover::after {
-        transform: scaleX(1.4) scaleY(1.6);
-        opacity: 0; }
-    .header .header-text .btn:active {
-      transform: translateY(3px);
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6); }
-    .header .header-text .btn::after {
-      content: "";
-      display: inline-block;
-      height: 100%;
-      width: 100%;
-      border-radius: 100px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      transition: all 0.4s;
-      background: #000; }
-
-@keyframes header-text-up {
-  0% {
-    transform: translateX(-500px);
-    opacity: 0; }
-  80% {
-    transform: translateX(10px);
-    opacity: 0.8; }
-  100% {
-    transform: translate(0);
-    opacity: 1; } }
-
-@keyframes header-text-down {
-  0% {
-    transform: translateX(500px);
-    opacity: 0; }
-  80% {
-    transform: translateX(-10px);
-    opacity: 0.8; }
-  100% {
-    transform: translate(0);
-    opacity: 1; } }
-
-@keyframes header-btn {
-  from {
-    opacity: 0;
-    transform: translateY(500px); }
-  to {
-    opacity: 1;
-    transform: translate(0); } }
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+}
+.header-img-logo {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+}
+.header-logo {
+  height: 3rem;
+  width: 3rem;
+  transition: all 2s;
+}
+.header-logo:hover {
+  opacity: 0;
+}
