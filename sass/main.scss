@@ -1,88 +1,129 @@
 @import url("https://fonts.googleapis.com/css2?family=Splash&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
+$--color-blue: #4eb9dde0;
+$--color-green: #52ff4fe0;
+$--color-black: #000;
+$--color-white: #fff;
+$--font-Lato: "Lato", sans-serif;
+$--font-Pacifico: "Pacifico", cursive;
+$--radius: 1rem;
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: $--font-Lato;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
   padding: 30px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 /* =================================================== Start  my css =======================================*/
+
 /* ---------- Header ----------- */
 .header {
-  background-image: linear-gradient(to right bottom, #4eb9dde0, #52ff4fe0), url(./img/foss.jpg);
+  background-image: linear-gradient(
+      to right bottom,
+      $--color-blue,
+      $--color-green
+    ),
+    url(./img/foss.jpg);
   height: 95vh;
   position: relative;
   border-radius: 1rem 1rem 0 0;
-  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%); }
-  .header .img-logo {
+
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+
+  & .img-logo {
     position: absolute;
     top: 30px;
-    left: 40px; }
-    .header .img-logo .logo {
+    left: 40px;
+
+    & .logo {
       height: 3rem;
       width: 3rem;
-      transition: all 2s; }
-      .header .img-logo .logo:hover {
-        opacity: 0; }
-  .header .header-text {
+      transition: all 2s;
+
+      &:hover {
+        opacity: 0;
+      }
+    }
+  }
+
+  & .header-text {
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center; }
-    .header .header-text .header-text-up,
-    .header .header-text .header-text-down {
+    text-align: center;
+
+    & .header-text-up,
+    & .header-text-down {
       display: block;
       text-transform: uppercase;
       text-align: center;
-      color: #000; }
-    .header .header-text .header-text-up {
-      font-family: "Lato", sans-serif;
+      color: $--color-black;
+    }
+
+    & .header-text-up {
+      font-family: $--font-Lato;
       font-weight: 700;
       font-size: 80px;
       letter-spacing: 1.7rem;
-      animation: header-text-up 2s; }
-    .header .header-text .header-text-down {
-      font-family: "Lato", sans-serif;
+
+      animation: header-text-up 2s;
+    }
+
+    & .header-text-down {
+      font-family: $--font-Lato;
       font-weight: 400;
       font-size: 30px;
       letter-spacing: 0.5rem;
       margin-bottom: 70px;
-      animation: header-text-down 2s; }
-    .header .header-text .btn,
-    .header .header-text .btn:visited {
+
+      animation: header-text-down 2s;
+    }
+
+    & .btn,
+    & .btn:visited {
       text-transform: uppercase;
       text-decoration: none;
-      font-family: "Pacifico", cursive;
+      font-family: $--font-Pacifico;
       display: inline-block;
       border-radius: 100px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 10px 20px rgba($--color-black, 0.3);
       transition: all 0.2s;
       animation: header-btn 2s ease-out 0.5s;
       animation-fill-mode: backwards;
-      background-color: #000;
+      background-color: $--color-black;
       padding: 15px 45px;
-      color: #fff;
-      position: relative; }
-    .header .header-text .btn:hover {
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
-      transform: translateY(-3px); }
-      .header .header-text .btn:hover::after {
+      color: $--color-white;
+      position: relative;
+    }
+
+    & .btn:hover {
+      box-shadow: 0 10px 20px rgba($--color-black, 0.6);
+      transform: translateY(-3px);
+
+      &::after {
         transform: scaleX(1.4) scaleY(1.6);
-        opacity: 0; }
-    .header .header-text .btn:active {
+        opacity: 0;
+      }
+    }
+
+    & .btn:active {
       transform: translateY(3px);
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6); }
-    .header .header-text .btn::after {
+      box-shadow: 0 5px 10px rgba($--color-black, 0.6);
+    }
+
+    & .btn::after {
       content: "";
       display: inline-block;
       height: 100%;
@@ -93,34 +134,48 @@ body {
       left: 0;
       z-index: -1;
       transition: all 0.4s;
-      background: #000; }
+      background: $--color-black;
+    }
+  }
+}
 
 @keyframes header-text-up {
   0% {
     transform: translateX(-500px);
-    opacity: 0; }
+    opacity: 0;
+  }
   80% {
     transform: translateX(10px);
-    opacity: 0.8; }
+    opacity: 0.8;
+  }
   100% {
     transform: translate(0);
-    opacity: 1; } }
+    opacity: 1;
+  }
+}
 
 @keyframes header-text-down {
   0% {
     transform: translateX(500px);
-    opacity: 0; }
+    opacity: 0;
+  }
   80% {
     transform: translateX(-10px);
-    opacity: 0.8; }
+    opacity: 0.8;
+  }
   100% {
     transform: translate(0);
-    opacity: 1; } }
+    opacity: 1;
+  }
+}
 
 @keyframes header-btn {
   from {
     opacity: 0;
-    transform: translateY(500px); }
+    transform: translateY(500px);
+  }
   to {
     opacity: 1;
-    transform: translate(0); } }
+    transform: translate(0);
+  }
+}
