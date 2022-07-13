@@ -16,7 +16,7 @@
 }
 
 .btn:hover {
-  box-shadow: 0 10px 20px rgba($--color-black, 0.6);
+  box-shadow: 0 1rem 2rem rgba($--color-black, 0.6);
   transform: translateY(-3px);
 
   &::after {
@@ -27,7 +27,7 @@
 
 .btn:active {
   transform: translateY(3px);
-  box-shadow: 0 5px 10px rgba($--color-black, 0.6);
+  box-shadow: 0 0.5rem 1rem rgba($--color-black, 0.6);
 }
 
 .btn::after {
@@ -42,4 +42,31 @@
   z-index: -1;
   transition: all 0.4s;
   background: $--color-black;
+}
+
+.about-btn {
+  &:link,
+  &:visited {
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: $--color-green-darker;
+    font-family: $--font-Lato;
+    border-bottom: 1px solid $--color-green-darker;
+    padding: 0.5rem;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    background-color: $--color-green-darker;
+    color: $--color-white;
+    border-radius: $--radius;
+    transform: translateY(-20px);
+    box-shadow: 0 1rem 2rem rgba($--color-black, 0.6);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 0.5rem 1rem rgba($--color-black, 0.6);
+  }
 }

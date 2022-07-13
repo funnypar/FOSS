@@ -119,8 +119,9 @@ body {
   background-color: #f7f7f7;
   height: 95vh;
   width: 100%;
-  margin-top: -30%;
-  padding-top: 30%; }
+  margin-top: -30vh;
+  padding-top: 30vh;
+  box-sizing: content-box; }
 
 .btn,
 .btn:visited {
@@ -139,7 +140,7 @@ body {
   position: relative; }
 
 .btn:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.6);
   transform: translateY(-3px); }
   .btn:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
@@ -147,7 +148,7 @@ body {
 
 .btn:active {
   transform: translateY(3px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6); }
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.6); }
 
 .btn::after {
   content: "";
@@ -161,6 +162,27 @@ body {
   z-index: -1;
   transition: all 0.4s;
   background: #000; }
+
+.about-btn:link, .about-btn:visited {
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #04d500;
+  font-family: "Lato", sans-serif;
+  border-bottom: 1px solid #04d500;
+  padding: 0.5rem;
+  transition: all 0.2s; }
+
+.about-btn:hover {
+  background-color: #04d500;
+  color: #fff;
+  border-radius: 1rem;
+  transform: translateY(-20px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.6); }
+
+.about-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.6); }
 
 .header {
   background-image: linear-gradient(to right bottom, #4eb9dde0, #52ff4fe0), url(./img/foss.jpg);
