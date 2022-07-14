@@ -4,5 +4,18 @@
   width: 100%;
   margin-top: -30vh;
   padding-top: 30vh;
+  padding-bottom: 30vh;
+  box-sizing: content-box;
+}
+.feature {
+  background-image: linear-gradient(
+      to right bottom,
+      $--color-blue,
+      $--color-green
+    ),
+    url(./img/foss.jpg);
+  height: 95vh;
+  width: 100%;
+  padding-top: 30vh;
   box-sizing: content-box;
 }

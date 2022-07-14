@@ -118,11 +118,23 @@ body {
 .padding-left-medium {
   padding-left: 8rem; }
 
+.padding-left-right-medium {
+  padding-left: 8rem;
+  padding-right: 8rem; }
+
 .about {
   background-color: #f7f7f7;
   height: 95vh;
   width: 100%;
   margin-top: -30vh;
+  padding-top: 30vh;
+  padding-bottom: 30vh;
+  box-sizing: content-box; }
+
+.feature {
+  background-image: linear-gradient(to right bottom, #4eb9dde0, #52ff4fe0), url(./img/foss.jpg);
+  height: 95vh;
+  width: 100%;
   padding-top: 30vh;
   box-sizing: content-box; }
 
@@ -211,6 +223,17 @@ body {
     transform: scale(1.2);
     z-index: 20; }
 
+.single-card {
+  background-color: #fff;
+  padding: 5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 1rem 1.5rem 2rem rgba(0, 0, 0, 0.25); }
+  .single-card-logo {
+    color: linear-gradient(to right, #4f52ffe0, #52ff4fe0);
+    display: inline-block;
+    -webkit-background-clip: text;
+    color: transparent; }
+
 .header {
   background-image: linear-gradient(to right bottom, #4eb9dde0, #52ff4fe0), url(./img/foss.jpg);
   height: 95vh;
@@ -232,3 +255,9 @@ body {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr; }
+
+.row-feature {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 3rem; }

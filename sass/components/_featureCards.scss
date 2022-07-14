@@ -1,0 +1,13 @@
+.single-card {
+  background-color: $--color-white;
+  padding: 5rem 2rem;
+  border-radius: $--radius;
+  box-shadow: 1rem 1.5rem 2rem rgba($--color-black, 0.25);
+
+  &-logo {
+    color: linear-gradient(to right, $--color-blue-darker, $--color-green);
+    display: inline-block;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
