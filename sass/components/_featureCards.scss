@@ -3,11 +3,31 @@
   padding: 5rem 2rem;
   border-radius: $--radius;
   box-shadow: 1rem 1.5rem 2rem rgba($--color-black, 0.25);
+  max-height: 20rem;
+  transition: all 0.3s;
 
   &-logo {
-    color: linear-gradient(to right, $--color-blue-darker, $--color-green);
+    font-size: 5rem;
     display: inline-block;
+    background: linear-gradient(to right, $--color-blue-darker, $--color-green);
     -webkit-background-clip: text;
     color: transparent;
+    margin-bottom: 1rem;
+  }
+
+  &-title {
+    margin-bottom: 1.5rem;
+    font-family: $--font-Lato;
+    text-transform: uppercase;
+  }
+  &-text {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+
+  &:hover {
+    box-shadow: 1.5rem 2rem 2rem rgba($--color-black, 0.5);
+    transform: translateY(-1rem);
   }
 }

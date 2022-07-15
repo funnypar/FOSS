@@ -132,11 +132,16 @@ body {
   box-sizing: content-box; }
 
 .feature {
-  background-image: linear-gradient(to right bottom, #4eb9dde0, #52ff4fe0), url(./img/foss.jpg);
+  background-image: linear-gradient(to right bottom, #4eb9dde0, #52ff4fe0), url(./img/social.jpg);
+  background-size: cover;
   height: 95vh;
   width: 100%;
   padding-top: 30vh;
-  box-sizing: content-box; }
+  box-sizing: content-box;
+  margin-top: -25vh;
+  transform: skewY(-7deg); }
+  .feature > * {
+    transform: skewY(7deg); }
 
 .btn,
 .btn:visited {
@@ -227,12 +232,27 @@ body {
   background-color: #fff;
   padding: 5rem 2rem;
   border-radius: 1rem;
-  box-shadow: 1rem 1.5rem 2rem rgba(0, 0, 0, 0.25); }
+  box-shadow: 1rem 1.5rem 2rem rgba(0, 0, 0, 0.25);
+  max-height: 20rem;
+  transition: all 0.3s; }
   .single-card-logo {
-    color: linear-gradient(to right, #4f52ffe0, #52ff4fe0);
+    font-size: 5rem;
     display: inline-block;
+    background: linear-gradient(to right, #4f52ffe0, #52ff4fe0);
     -webkit-background-clip: text;
-    color: transparent; }
+    color: transparent;
+    margin-bottom: 1rem; }
+  .single-card-title {
+    margin-bottom: 1.5rem;
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase; }
+  .single-card-text {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.75rem;
+    font-weight: 500; }
+  .single-card:hover {
+    box-shadow: 1.5rem 2rem 2rem rgba(0, 0, 0, 0.5);
+    transform: translateY(-1rem); }
 
 .header {
   background-image: linear-gradient(to right bottom, #4eb9dde0, #52ff4fe0), url(./img/foss.jpg);

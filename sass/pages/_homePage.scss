@@ -13,9 +13,17 @@
       $--color-blue,
       $--color-green
     ),
-    url(./img/foss.jpg);
+    url(./img/social.jpg);
+  background-size: cover;
   height: 95vh;
   width: 100%;
   padding-top: 30vh;
   box-sizing: content-box;
+  margin-top: -25vh;
+
+  transform: skewY(-7deg);
+
+  & > * {
+    transform: skewY(7deg);
+  }
 }
