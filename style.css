@@ -103,6 +103,10 @@ body {
   .about-text:not(:last-child) {
     margin-bottom: 1.3rem; }
 
+.foss {
+  text-transform: uppercase;
+  font-weight: 800; }
+
 .center {
   text-align: center; }
 
@@ -142,6 +146,19 @@ body {
   transform: skewY(-7deg); }
   .feature > * {
     transform: skewY(7deg); }
+
+.section-tours {
+  background-color: #f7f7f7;
+  height: 95vh;
+  width: 100%;
+  padding: 20rem 0 50rem 0;
+  margin-top: -10rem;
+  position: relative; }
+  .section-tours-btn {
+    position: absolute;
+    bottom: -6rem;
+    left: 50%;
+    transform: translate(-50%, -50%); }
 
 .btn,
 .btn:visited {
@@ -204,6 +221,72 @@ body {
   transform: translateY(0);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.6); }
 
+.card-btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "Pacifico", cursive;
+  display: inline-block;
+  border-radius: 100px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s;
+  animation-fill-mode: backwards;
+  background-color: #000;
+  padding: 15px 45px;
+  color: #fff;
+  position: relative; }
+  .card-btn:hover {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.6); }
+    .card-btn:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0; }
+  .card-btn:active {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.6); }
+  .card-btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+    background: #000; }
+
+.section-tours-btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "Pacifico", cursive;
+  display: inline-block;
+  border-radius: 100px;
+  box-shadow: 0 10px 20px rgba(4, 213, 0, 0.3);
+  transition: all 0.2s;
+  animation-fill-mode: backwards;
+  background-color: #04d500;
+  padding: 15px 45px;
+  color: #fff;
+  position: relative; }
+  .section-tours-btn:hover {
+    box-shadow: 0 1rem 2rem rgba(4, 213, 0, 0.6); }
+    .section-tours-btn:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0; }
+  .section-tours-btn:active {
+    box-shadow: 0 0.5rem 1rem rgba(4, 213, 0, 0.6); }
+  .section-tours-btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+    background: #04d500; }
+
 .composite {
   position: absolute; }
   .composite--photo {
@@ -254,6 +337,102 @@ body {
     box-shadow: 1.5rem 2rem 2rem rgba(0, 0, 0, 0.5);
     transform: translateY(-1rem); }
 
+.card-tours {
+  perspective: 1500rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  transition: all 1s ease;
+  height: 30rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  backface-visibility: hidden; }
+  .card-tours-slide {
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30rem;
+    backface-visibility: hidden; }
+    .card-tours-slide-front {
+      background-color: #fff; }
+    .card-tours-slide-back {
+      transform: rotateY(180deg); }
+      .card-tours-slide-back-1 {
+        background-image: linear-gradient(to right bottom, #fdc830, #f37335); }
+      .card-tours-slide-back-2 {
+        background-image: linear-gradient(to right bottom, #fc5c7d, #6a82fb); }
+      .card-tours-slide-back-3 {
+        background-image: linear-gradient(to right bottom, #00b09b, #96c93d); }
+  .card-tours:hover .card-tours-slide-front {
+    transform: rotateY(-180deg);
+    backface-visibility: hidden; }
+  .card-tours:hover .card-tours-slide-back {
+    transform: rotateY(0deg); }
+  .card-tours-picture {
+    height: 13rem;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 87%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 87%, 0 100%);
+    position: relative; }
+    .card-tours-picture-1 {
+      background-image: url(../../img/card-1.jpg), linear-gradient(to right bottom, #fdc830, #f37335); }
+    .card-tours-picture-2 {
+      background-image: url(../../img/card-2.jpg), linear-gradient(to right bottom, #fc5c7d, #6a82fb); }
+    .card-tours-picture-3 {
+      background-image: url(../../img/card-3.jpg), linear-gradient(to right bottom, #00b09b, #96c93d); }
+  .card-tours-header {
+    font-size: 2.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: #fff;
+    position: absolute;
+    top: 7rem;
+    right: 2rem; }
+    .card-tours-header-1 {
+      width: 80%; }
+    .card-tours-header-2 {
+      width: 75%; }
+    .card-tours-header-3 {
+      width: 75%; }
+    .card-tours-header-span {
+      padding: 0.5rem 2rem;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone; }
+      .card-tours-header-span-1 {
+        background-image: linear-gradient(to right bottom, #fdc830, #f37335); }
+      .card-tours-header-span-2 {
+        background-image: linear-gradient(to right bottom, #fc5c7d, #6a82fb); }
+      .card-tours-header-span-3 {
+        background-image: linear-gradient(to right bottom, #00b09b, #96c93d); }
+  .card-tours-detail {
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    text-transform: capitalize;
+    padding: 0 2rem;
+    margin-top: 4rem; }
+  .card-tours-detailBox {
+    text-align: center;
+    margin-bottom: 5rem;
+    margin-top: 5rem; }
+    .card-tours-detailBox-text {
+      font-weight: 700;
+      font-size: 1.4rem;
+      padding-bottom: 2rem; }
+    .card-tours-detailBox-img {
+      height: 10rem;
+      width: 10rem; }
+    .card-tours-detailBox-btn {
+      position: absolute;
+      top: 85%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+
 .header {
   background-image: linear-gradient(to right bottom, #4eb9dde0, #52ff4fe0), url(./img/foss.jpg);
   height: 95vh;
@@ -280,4 +459,10 @@ body {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 3rem; }
+
+.row-tours {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 3rem; }

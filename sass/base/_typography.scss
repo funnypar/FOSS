@@ -2,85 +2,90 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
 body {
-  font-family: $--font-Lato;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.7;
-  padding: 30px;
+    font-family: $--font-Lato;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    padding: 30px;
 }
 
 .heading-text {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-
-  &-up,
-  &-down {
-    display: block;
-    text-transform: uppercase;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    color: $--color-black;
-  }
 
-  &-up {
-    font-family: $--font-Lato;
-    font-weight: 700;
-    font-size: 80px;
-    letter-spacing: 1.7rem;
+    &-up,
+    &-down {
+        display: block;
+        text-transform: uppercase;
+        text-align: center;
+        color: $--color-black;
+    }
 
-    animation: header-text-up 2s;
-  }
+    &-up {
+        font-family: $--font-Lato;
+        font-weight: 700;
+        font-size: 80px;
+        letter-spacing: 1.7rem;
 
-  &-down {
-    font-family: $--font-Lato;
-    font-weight: 400;
-    font-size: 30px;
-    letter-spacing: 0.5rem;
-    margin-bottom: 70px;
+        animation: header-text-up 2s;
+    }
 
-    animation: header-text-down 2s;
-  }
+    &-down {
+        font-family: $--font-Lato;
+        font-weight: 400;
+        font-size: 30px;
+        letter-spacing: 0.5rem;
+        margin-bottom: 70px;
+
+        animation: header-text-down 2s;
+    }
 }
 
 .about-heading {
-  font-family: $--font-Pacifico;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 3rem;
-  letter-spacing: 0.5rem;
-  background-image: linear-gradient(
-    to right,
-    $--color-blue-darker,
-    $--color-green
-  );
-  display: inline-block;
-  -webkit-background-clip: text;
-  color: transparent;
-  transition: all 0.2s;
+    font-family: $--font-Pacifico;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    background-image: linear-gradient(
+        to right,
+        $--color-blue-darker,
+        $--color-green
+    );
+    display: inline-block;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all 0.2s;
 
-  &:hover {
-    transform: skewY(2deg) skewX(15deg) scale(1.1);
-    text-shadow: 0rem 1.7rem 2rem rgba($--color-black, 0.8);
-    letter-spacing: 1rem;
-  }
+    &:hover {
+        transform: skewY(2deg) skewX(15deg) scale(1.1);
+        text-shadow: 0rem 1.7rem 2rem rgba($--color-black, 0.8);
+        letter-spacing: 1rem;
+    }
 }
 
 .about-title {
-  text-transform: uppercase;
-  font-size: 1.3rem;
-  font-weight: 700;
-  font-family: $--font-Lato;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-family: $--font-Lato;
 }
 .about-text {
-  text-transform: capitalize;
-  letter-spacing: 0.05rem;
-  font-size: 1rem;
-  font-family: "Courier New", Courier, monospace;
-  font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 0.05rem;
+    font-size: 1rem;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 500;
 
-  &:not(:last-child) {
-    margin-bottom: 1.3rem;
-  }
+    &:not(:last-child) {
+        margin-bottom: 1.3rem;
+    }
+}
+
+.foss {
+    text-transform: uppercase;
+    font-weight: 800;
 }
