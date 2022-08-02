@@ -154,3 +154,45 @@
         background: $--color-green-darker;
     }
 }
+
+.story-btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: $--font-Pacifico;
+    display: inline-block;
+    border-radius: 100px;
+    box-shadow: 0 10px 20px rgba($--color-white, 0.3);
+    transition: all 0.2s;
+    animation-fill-mode: backwards;
+    background-color: $--color-white;
+    padding: 15px 45px;
+    color: $--color-black;
+    position: relative;
+
+    &:hover {
+        box-shadow: 0 1rem 2rem rgba($--color-white, 0.6);
+
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+
+    &:active {
+        box-shadow: 0 0.5rem 1rem rgba($--color-white, 0.6);
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all 0.4s;
+        background: $--color-white;
+    }
+}

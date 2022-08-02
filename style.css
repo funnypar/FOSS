@@ -76,7 +76,7 @@ body {
   font-family: "Pacifico", cursive;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 2.5rem;
   letter-spacing: 0.5rem;
   background-image: linear-gradient(to right, #4f52ffe0, #52ff4fe0);
   display: inline-block;
@@ -84,6 +84,22 @@ body {
   color: transparent;
   transition: all 0.2s; }
   .about-heading:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0rem 1.7rem 2rem rgba(0, 0, 0, 0.8);
+    letter-spacing: 1rem; }
+
+.story-heading {
+  font-family: "Pacifico", cursive;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  letter-spacing: 0.5rem;
+  background-color: #fff;
+  display: inline-block;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.2s; }
+  .story-heading:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0rem 1.7rem 2rem rgba(0, 0, 0, 0.8);
     letter-spacing: 1rem; }
@@ -125,6 +141,9 @@ body {
 .padding-left-right-medium {
   padding-left: 8rem;
   padding-right: 8rem; }
+
+.padding-top-medium {
+  padding-top: 10rem; }
 
 .about {
   background-color: #f7f7f7;
@@ -287,6 +306,39 @@ body {
     transition: all 0.4s;
     background: #04d500; }
 
+.story-btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "Pacifico", cursive;
+  display: inline-block;
+  border-radius: 100px;
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+  transition: all 0.2s;
+  animation-fill-mode: backwards;
+  background-color: #fff;
+  padding: 15px 45px;
+  color: #000;
+  position: relative; }
+  .story-btn:hover {
+    box-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.6); }
+    .story-btn:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0; }
+  .story-btn:active {
+    box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.6); }
+  .story-btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+    background: #fff; }
+
 .composite {
   position: absolute; }
   .composite--photo {
@@ -432,6 +484,76 @@ body {
       top: 85%;
       left: 50%;
       transform: translate(-50%, -50%); }
+
+.story {
+  position: relative;
+  padding-bottom: 10rem; }
+  .story-box {
+    margin: 0 auto;
+    height: 15rem;
+    width: 75%;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.3);
+    padding: 2rem 2rem 2rem 0;
+    transform: skewX(-12deg);
+    margin-bottom: 5rem; }
+    .story-box-img {
+      height: 7rem;
+      width: 7rem;
+      float: left;
+      margin: 2.5rem 3rem;
+      -webkit-shape-outside: circle(41% at 50% 50%);
+      shape-outside: circle(35% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      backface-visibility: hidden;
+      transform: translateX(-0.5rem) skewX(12deg);
+      transition: all 0.5s; }
+      .story-box-img-size {
+        height: 7rem;
+        position: relative;
+        transform: scale(1);
+        transition: all 0.5s; }
+      .story-box-img-caption {
+        font-size: 1.1rem;
+        font-weight: 800;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: #fff;
+        transform: translate(-50%, -10%);
+        text-align: center;
+        transition: all 0.5s;
+        opacity: 0; }
+    .story-box-detail {
+      font-size: 1rem;
+      letter-spacing: 0.1rem;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      text-transform: capitalize;
+      transform: skewX(12deg); }
+    .story-box:hover .story-box-img-caption {
+      opacity: 1;
+      transform: translate(-50%, -50%); }
+    .story-box:hover .story-box-img-size {
+      transform: scale(1.1);
+      filter: blur(3px); }
+  .story-btn {
+    position: absolute;
+    bottom: 7rem;
+    left: 50%;
+    transform: translate(-50%); }
+
+.story {
+  position: relative;
+  overflow: hidden; }
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100rem;
+  z-index: -1;
+  opacity: 0.5; }
 
 .header {
   background-image: linear-gradient(to right bottom, #4eb9dde0, #52ff4fe0), url(./img/foss.jpg);
