@@ -1,0 +1,61 @@
+.footer {
+    padding: 5rem 0;
+    background-color: $--color-black-light;
+    position: relative;
+    &-row {
+        margin-top: 13rem;
+    }
+    &-1-of-2 {
+        border-top: 2px solid white;
+        width: 60%;
+        margin-left: 4rem;
+        display: inline-block;
+        padding-top: 0.5rem;
+    }
+    &-logo {
+        position: absolute;
+        left: 50%;
+        top: 25%;
+        transform: translate(-50%, -50%);
+        &-img {
+            height: 10rem;
+            width: 10rem;
+        }
+    }
+    &-links {
+        display: flex;
+        justify-content: center;
+    }
+    &-link {
+        list-style: none;
+        padding-right: 1rem;
+        transition: all 0.3s;
+        &:hover,
+        &:visited {
+            transform: rotate(-5deg);
+            text-shadow: 4px 4px $--color-black;
+        }
+        &-content {
+            color: wheat;
+            text-decoration: none;
+            transition: all 0.3s;
+            &:hover {
+                color: $--color-green-blue;
+            }
+        }
+    }
+
+    &-copyright {
+        margin-top: -0.7rem;
+        color: wheat;
+        font-size: 1rem;
+        width: 92%;
+        font-family: "Courier New", Courier, monospace;
+        letter-spacing: 0.1rem;
+    }
+
+    &-writter {
+        text-decoration: none;
+        color: $--color-green-blue;
+    }
+}
