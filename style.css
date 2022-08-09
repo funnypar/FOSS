@@ -104,6 +104,23 @@ body {
     text-shadow: 0rem 1.7rem 2rem rgba(0, 0, 0, 0.8);
     letter-spacing: 1rem; }
 
+.popup-heading {
+  font-family: "Pacifico", cursive;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding: 2rem;
+  letter-spacing: 0.5rem;
+  background-image: linear-gradient(to right, #4f52ffe0, #52ff4fe0);
+  display: inline-block;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.2s; }
+  .popup-heading:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0rem 1.7rem 2rem rgba(0, 0, 0, 0.8);
+    letter-spacing: 1rem; }
+
 .form-heading {
   width: 127%;
   font-family: "Pacifico", cursive;
@@ -381,6 +398,43 @@ body {
   .form-btn:active {
     box-shadow: 0 0.5rem 1rem rgba(0, 176, 155, 0.6); }
   .form-btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+    background: #00b09b; }
+
+.popup-btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "Pacifico", cursive;
+  display: inline-block;
+  border-radius: 100px;
+  box-shadow: 0 10px 20px rgba(0, 176, 155, 0.3);
+  transition: all 0.2s;
+  animation-fill-mode: backwards;
+  background-color: #00b09b;
+  padding: 7px 30px;
+  color: #000;
+  position: absolute;
+  left: 45%;
+  top: 92%;
+  transform: translate(-50%, -50%);
+  border: none; }
+  .popup-btn:hover {
+    box-shadow: 0 1rem 2rem rgba(0, 176, 155, 0.6); }
+    .popup-btn:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0; }
+  .popup-btn:active {
+    box-shadow: 0 0.5rem 1rem rgba(0, 176, 155, 0.6); }
+  .popup-btn::after {
     content: "";
     display: inline-block;
     height: 100%;
@@ -875,3 +929,57 @@ body {
     position: absolute;
     left: 0;
     top: 0.6rem; }
+
+.popup {
+  background-color: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 5000;
+  transition: all 0.3s;
+  opacity: 0;
+  visibility: hidden; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 80%;
+    border-radius: 15px;
+    overflow: hidden;
+    display: table; }
+    .popup-box-left {
+      display: table-cell;
+      width: 33.33333333%; }
+    .popup-box-img {
+      display: block;
+      width: 100%; }
+    .popup-box-right {
+      display: table-cell;
+      width: 66.6666667%;
+      vertical-align: top;
+      padding: 2rem 5rem; }
+      .popup-box-right-text {
+        font-size: 1rem;
+        font-family: "Courier New", Courier, monospace;
+        column-count: 2;
+        column-gap: 4rem;
+        column-rule: 2px solid #999;
+        hyphens: auto; }
+  .popup-close {
+    position: absolute;
+    top: 1.75rem;
+    right: 1.25rem;
+    text-decoration: none;
+    font-size: 2.25rem;
+    line-height: 0rem;
+    color: #000;
+    transition: all 0.3s; }
+    .popup-close:hover {
+      color: #00b09b; }
