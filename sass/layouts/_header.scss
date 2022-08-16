@@ -1,28 +1,42 @@
 .header {
-  background-image: linear-gradient(
-      to right bottom,
-      $--color-blue,
-      $--color-green
-    ),
-    url(./img/foss.jpg);
-  height: 95vh;
-  position: relative;
-  border-radius: 1rem 1rem 0 0;
+    background-image: linear-gradient(
+            to right bottom,
+            $--color-blue,
+            $--color-green
+        ),
+        url(./img/foss.jpg);
+    height: 95vh;
+    position: relative;
+    border-radius: 1rem 1rem 0 0;
 
-  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 
-  &-img-logo {
-    position: absolute;
-    top: 30px;
-    left: 40px;
-  }
-  &-logo {
-    height: 3rem;
-    width: 3rem;
-    transition: all 2s;
-
-    &:hover {
-      opacity: 0;
+    @include responsive(tab-land) {
+        height: 75vh;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     }
-  }
+    @include responsive(tab-vert) {
+        border-radius: 0;
+        height: 75vh;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+
+    @include responsive(phone) {
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    }
+
+    &-img-logo {
+        position: absolute;
+        top: 30px;
+        left: 40px;
+    }
+    &-logo {
+        height: 3rem;
+        width: 3rem;
+        transition: all 2s;
+
+        &:hover {
+            opacity: 0;
+        }
+    }
 }

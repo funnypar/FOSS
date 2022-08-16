@@ -2,8 +2,13 @@
     padding: 5rem 0;
     background-color: $--color-black-light;
     position: relative;
+
     &-row {
         margin-top: 13rem;
+
+        @include responsive(tab-land) {
+            margin-top: 20rem;
+        }
     }
     &-1-of-2 {
         border-top: 2px solid white;
@@ -11,6 +16,10 @@
         margin-left: 4rem;
         display: inline-block;
         padding-top: 0.5rem;
+
+        @include responsive(tab-land) {
+            margin: 0 auto;
+        }
     }
     &-logo {
         position: absolute;
@@ -52,6 +61,17 @@
         width: 92%;
         font-family: "Courier New", Courier, monospace;
         letter-spacing: 0.1rem;
+
+        @include responsive(tab-land) {
+            font-size: 1.5rem;
+            width: 95%;
+            margin: -2rem auto;
+        }
+        @include responsive(tab-vert) {
+            font-size: 1.7rem;
+            width: 95%;
+            margin: -4rem auto;
+        }
     }
 
     &-writter {

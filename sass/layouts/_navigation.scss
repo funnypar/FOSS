@@ -27,6 +27,7 @@
 
         opacity: 0;
         width: 0;
+        display: none;
     }
 
     &-link {
@@ -67,12 +68,13 @@
         display: none;
 
         &:checked ~ .nav-background {
-            transform: scale(60);
+            transform: scale(80);
         }
         &:checked ~ .nav-links {
             opacity: 1;
             width: 23%;
             z-index: 2000;
+            display: block;
         }
 
         &:checked + .nav-label .nav-icon {

@@ -13,6 +13,16 @@
     padding: 15px 45px;
     color: $--color-white;
     position: relative;
+
+    @include responsive(tab-land) {
+        padding: 10px 35px;
+    }
+    @include responsive(tab-vert) {
+        padding: 10px 35px;
+    }
+    @include responsive(phone) {
+        padding: 5px 20px;
+    }
 }
 
 .btn:hover {
@@ -211,9 +221,24 @@
     color: $--color-black;
     position: absolute;
     left: 45%;
-    top: 50%;
+    top: 0;
     transform: translate(-50%, -50%);
     border: none;
+
+    @include responsive(tab-land) {
+        padding: 10px 40px;
+        top: 4.5rem;
+        left: 50%;
+    }
+    @include responsive(tab-vert) {
+        padding: 10px 25px;
+        top: 3rem;
+        left: 50%;
+    }
+    @include responsive(phone) {
+        padding: 10px 20px;
+        top: 3.5rem;
+    }
 
     &:hover {
         box-shadow: 0 1rem 2rem rgba($--color-green-blue, 0.6);

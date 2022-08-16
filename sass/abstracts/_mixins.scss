@@ -4,3 +4,37 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+// Responsive Manager
+/*
+phone : 0-600px 
+tab-vert : 600-900px
+tab-land : 900px-1080
+big-screen : 1080 - ...
+*/
+@mixin responsive($breakpoint) {
+    @if $breakpoint == phone {
+        // width <= 500px
+        @media (max-width: 31.25em) {
+            @content;
+        }
+    }
+    @if $breakpoint == tab-vert {
+        @media (max-width: 37.5em) {
+            // width <= 600px
+            @content;
+        }
+    }
+    @if $breakpoint == tab-land {
+        @media (max-width: 56.25em) {
+            //width <= 900px
+            @content;
+        }
+    }
+    @if $breakpoint == big-screen {
+        // width > 1200px
+        @media (min-width: 75em) {
+            @content;
+        }
+    }
+}

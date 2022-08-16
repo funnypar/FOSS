@@ -6,8 +6,17 @@
         $--color-green-light,
         $--color-green-blue
     );
-
     height: 60rem;
+
+    @include responsive(tab-land) {
+        padding-bottom: 72vh;
+    }
+    @include responsive(tab-vert) {
+        padding-bottom: 63vh;
+    }
+    @include responsive(phone) {
+        padding-bottom: 55vh;
+    }
 
     &-box {
         background-image: linear-gradient(
@@ -23,6 +32,17 @@
         margin: 0 auto;
         border-radius: $--radius;
         box-shadow: 0 1.5rem 4rem rgba($--color-black, 0.4);
+
+        @include responsive(tab-land) {
+            height: 50rem;
+            width: 95%;
+            background-image: linear-gradient(
+                    105deg,
+                    $--color-white 57%,
+                    transparent 50.15%
+                ),
+                url("../../img/desk.jpg");
+        }
     }
 
     &-group {
@@ -30,6 +50,9 @@
         padding: 1rem 4.6rem;
         position: relative;
 
+        @include responsive(phone) {
+            padding: 1rem 3rem;
+        }
         &-input {
             display: block;
             border: none;
@@ -41,6 +64,13 @@
             width: 90%;
             margin-bottom: 1.5rem;
             border-bottom: 4px solid transparent;
+
+            @include responsive(tab-land) {
+                width: 125%;
+            }
+            @include responsive(phone) {
+                width: 117%;
+            }
 
             &:focus:invalid {
                 border-bottom: 4px solid orangered;
@@ -58,10 +88,20 @@
         }
 
         &-label {
-            font-size: 1.5rems;
+            font-size: 1.5rem;
             font-weight: 600s;
             padding: 0.5rem 0;
             display: block;
+
+            @include responsive(tab-land) {
+                font-size: 1.7rem;
+            }
+            @include responsive(tab-vert) {
+                font-size: 1.5rem;
+            }
+            @include responsive(phone) {
+                font-size: 1.7rem;
+            }
         }
     }
 }
@@ -82,6 +122,16 @@
         cursor: pointer;
         position: relative;
         padding-left: 2.5rem;
+
+        @include responsive(tab-land) {
+            font-size: 1.5rem;
+        }
+        @include responsive(tab-vert) {
+            font-size: 1.25rem;
+        }
+        @include responsive(phone) {
+            font-size: 1.4rem;
+        }
     }
 
     &-btn {

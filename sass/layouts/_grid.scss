@@ -2,21 +2,43 @@
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
+
+    @include responsive(tab-vert) {
+        grid-template-rows: 1fr;
+        grid-template-columns: 0.75fr 1fr;
+    }
 }
 .row-feature {
     display: grid;
-    grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 3rem;
+
+    @include responsive(tab-land) {
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
 }
 .row-tours {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 3rem;
+
+    @include responsive(tab-vert) {
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 }
 .footer-row {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
+
+    @include responsive(tab-land) {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        gap: 10rem;
+    }
 }

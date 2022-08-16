@@ -6,7 +6,21 @@
     padding-top: 30vh;
     padding-bottom: 30vh;
     box-sizing: content-box;
+
+    @include responsive(tab-land) {
+        margin-bottom: -45vh;
+        padding-bottom: 0vh;
+    }
+    @include responsive(tab-vert) {
+        margin-bottom: 0vh;
+        padding-bottom: 0vh;
+    }
+
+    @include responsive(big-screen) {
+        padding-bottom: 10vh;
+    }
 }
+
 .feature {
     background-image: linear-gradient(
             to right bottom,
@@ -14,6 +28,7 @@
             $--color-green
         ),
         url(./img/social.jpg);
+
     background-size: cover;
     height: 95vh;
     width: 100%;
@@ -26,21 +41,53 @@
     & > * {
         transform: skewY(7deg);
     }
+
+    @include responsive(tab-land) {
+        padding-top: 13vh;
+        padding-bottom: 43vh;
+        & > * {
+            transform: skewY(14deg);
+        }
+    }
+    @include responsive(tab-vert) {
+        padding-top: 10vh;
+        padding-bottom: 30vh;
+        & > * {
+            transform: skewY(14deg);
+        }
+    }
+    @include responsive(phone) {
+        padding-bottom: 15vh;
+    }
+    @include responsive(big-screen) {
+        padding-top: 17vh;
+    }
 }
 
 .section-tours {
-    background-color: $--color-gray-light-1;
     height: 95vh;
     width: 100%;
     padding: 20rem 0 50rem 0;
     margin-top: -12rem;
     position: relative;
-    z-index: -1;
 
+    @include responsive(tab-vert) {
+        padding-bottom: 150vh;
+    }
+    @include responsive(tab-land) {
+        margin-top: -10rem;
+    }
+    @include responsive(phone) {
+        padding-bottom: 137vh;
+    }
     &-btn {
         position: absolute;
         bottom: -6rem;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        @include responsive(tab-land) {
+            bottom: -8rem;
+        }
     }
 }

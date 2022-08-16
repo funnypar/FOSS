@@ -1,6 +1,15 @@
 .story {
     position: relative;
     padding-bottom: 10rem;
+
+    @include responsive(tab-vert) {
+        padding-bottom: 20rem;
+    }
+
+    @include responsive(phone) {
+        padding-bottom: 20rem;
+    }
+
     &-box {
         margin: 0 auto;
         height: 15rem;
@@ -10,6 +19,16 @@
         padding: 2rem 2rem 2rem 0;
         transform: skewX(-12deg);
         margin-bottom: 5rem;
+
+        @include responsive(tab-vert) {
+            height: 23rem;
+            padding: 1rem 3rem 2rem 0rem;
+        }
+
+        @include responsive(phone) {
+            height: 23rem;
+            padding: 1rem 3rem 2rem 0rem;
+        }
 
         &-img {
             height: 7rem;
@@ -21,13 +40,33 @@
             clip-path: circle(50% at 50% 50%);
             backface-visibility: hidden;
             transform: translateX(-0.5rem) skewX(12deg);
-
             transition: all 0.5s;
+
+            @include responsive(tab-vert) {
+                shape-outside: circle(39% at 50% 50%);
+                height: 12rem;
+                width: 12rem;
+            }
+
+            @include responsive(phone) {
+                shape-outside: circle(39% at 50% 50%);
+                height: 9rem;
+                width: 9rem;
+            }
+
             &-size {
                 height: 7rem;
                 position: relative;
                 transform: scale(1);
                 transition: all 0.5s;
+
+                @include responsive(tab-vert) {
+                    height: 12rem;
+                }
+
+                @include responsive(phone) {
+                    height: 9rem;
+                }
             }
 
             &-caption {
@@ -41,6 +80,14 @@
                 text-align: center;
                 transition: all 0.5s;
                 opacity: 0;
+
+                @include responsive(tab-vert) {
+                    font-size: 1.7rem;
+                }
+
+                @include responsive(phone) {
+                    font-size: 1.3rem;
+                }
             }
         }
         &-detail {
@@ -50,6 +97,16 @@
                 sans-serif;
             text-transform: capitalize;
             transform: skewX(12deg);
+            hyphens: auto;
+
+            @include responsive(tab-vert) {
+                font-size: 1.4rem;
+            }
+
+            @include responsive(phone) {
+                font-size: 1.35rem;
+                width: 100%;
+            }
         }
 
         &:hover &-img-caption {
@@ -65,8 +122,12 @@
 
     &-btn {
         position: absolute;
-        bottom: 7rem;
+        bottom: 5.5rem;
         left: 50%;
         transform: translate(-50%);
+
+        @include responsive(tab-vert) {
+            bottom: 10rem;
+        }
     }
 }
