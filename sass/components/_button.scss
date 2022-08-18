@@ -95,6 +95,10 @@
     color: $--color-white;
     position: relative;
 
+    @include responsive(tab-land) {
+        padding: 2.5px 25px;
+    }
+
     &:hover {
         box-shadow: 0 1rem 2rem rgba($--color-black, 0.6);
 
@@ -136,6 +140,10 @@
     padding: 15px 45px;
     color: $--color-white;
     position: relative;
+
+    @include responsive(tab-land) {
+        padding: 7px 27px;
+    }
 
     &:hover {
         box-shadow: 0 1rem 2rem rgba($--color-green-darker, 0.6);

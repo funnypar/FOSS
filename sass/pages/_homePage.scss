@@ -71,15 +71,16 @@
     margin-top: -12rem;
     position: relative;
 
-    @include responsive(tab-vert) {
-        padding-bottom: 150vh;
-    }
     @include responsive(tab-land) {
-        margin-top: -10rem;
+        padding-bottom: 195vh;
+    }
+    @include responsive(tab-vert) {
+        padding-bottom: 185vh;
     }
     @include responsive(phone) {
-        padding-bottom: 137vh;
+        padding-bottom: 165vh;
     }
+
     &-btn {
         position: absolute;
         bottom: -6rem;
@@ -87,7 +88,10 @@
         transform: translate(-50%, -50%);
 
         @include responsive(tab-land) {
-            bottom: -8rem;
+            bottom: -3rem;
+        }
+        @include responsive(phone) {
+            bottom: -6rem;
         }
     }
 }

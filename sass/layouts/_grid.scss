@@ -25,10 +25,16 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 3rem;
 
-    @include responsive(tab-vert) {
+    @include responsive(tab-land) {
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+
+    @include responsive(tab-vert) {
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        gap: 4rem;
     }
 }
 .footer-row {
