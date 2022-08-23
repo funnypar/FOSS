@@ -13,6 +13,19 @@
         right: 4rem;
         transition: all 0.3s;
         z-index: 500;
+
+        @include responsive(tab-land) {
+            top: 5.75rem;
+            right: 4.75rem;
+        }
+        @include responsive(tab-vert) {
+            top: 4.5rem;
+            right: 3rem;
+        }
+        @include responsive(phone) {
+            top: 5rem;
+            right: 2rem;
+        }
     }
 
     &-links {
@@ -28,11 +41,20 @@
         opacity: 0;
         width: 0;
         display: none;
+
+        @include responsive(tab-land) {
+            top: 40%;
+        }
     }
 
     &-link {
         list-style: none;
         margin: 1.5rem;
+
+        @include responsive(tab-land) {
+            margin: 1.5rem auto;
+            text-align: center;
+        }
 
         &-text {
             padding: 0.5rem 3rem;
@@ -41,6 +63,10 @@
             border-radius: 10px;
             font-size: 1.6rem;
 
+            @include responsive(tab-land) {
+                font-size: 2.5rem;
+            }
+
             &:link,
             &:visited {
                 text-decoration: none;
@@ -48,18 +74,30 @@
                 color: $--color-white;
                 background-size: 100%;
             }
-            &:hover {
-                background-image: linear-gradient(
-                    -120deg,
-                    transparent 0%,
-                    transparent 50%,
-                    $--color-white 50%,
-                    $--color-white 100%
-                );
 
-                background-size: 250%;
-                color: $--color-green-blue;
-                transform: translateX(3px);
+            @media only screen and (max-width: 56.25em),
+                only screen and (hover: none) {
+                &:active {
+                    color: $--color-black;
+                    transform: scale(1.5);
+                }
+            }
+
+            @media only screen and (min-width: 56.25em),
+                only screen and (hover: fine) {
+                &:hover {
+                    background-image: linear-gradient(
+                        -120deg,
+                        transparent 0%,
+                        transparent 50%,
+                        $--color-white 50%,
+                        $--color-white 100%
+                    );
+
+                    background-size: 250%;
+                    color: $--color-green-blue;
+                    transform: translateX(3px);
+                }
             }
         }
     }
@@ -75,6 +113,13 @@
             width: 23%;
             z-index: 2000;
             display: block;
+
+            @include responsive(tab-vert) {
+                width: 37%;
+            }
+            @include responsive(phone) {
+                width: 33%;
+            }
         }
 
         &:checked + .nav-label .nav-icon {
@@ -102,6 +147,25 @@
         z-index: 1000;
         cursor: pointer;
         box-shadow: 1.5rem 1.5rem 4rem rgba($--color-black, 0.4);
+
+        @include responsive(tab-land) {
+            height: 5rem;
+            width: 5rem;
+            top: 5rem;
+            right: 4rem;
+        }
+        @include responsive(tab-vert) {
+            height: 5rem;
+            width: 5rem;
+            top: 4rem;
+            right: 2rem;
+        }
+        @include responsive(phone) {
+            height: 5rem;
+            width: 5rem;
+            top: 3rem;
+            right: 1rem;
+        }
 
         &:hover {
             .nav-icon::after {

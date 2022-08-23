@@ -1218,6 +1218,18 @@ body {
   right: 4rem;
   transition: all 0.3s;
   z-index: 500; }
+  @media (max-width: 56.25em) {
+    .nav-background {
+      top: 5.75rem;
+      right: 4.75rem; } }
+  @media (max-width: 37.5em) {
+    .nav-background {
+      top: 4.5rem;
+      right: 3rem; } }
+  @media (max-width: 31.25em) {
+    .nav-background {
+      top: 5rem;
+      right: 2rem; } }
 
 .nav-links {
   position: fixed;
@@ -1231,26 +1243,41 @@ body {
   opacity: 0;
   width: 0;
   display: none; }
+  @media (max-width: 56.25em) {
+    .nav-links {
+      top: 40%; } }
 
 .nav-link {
   list-style: none;
   margin: 1.5rem; }
+  @media (max-width: 56.25em) {
+    .nav-link {
+      margin: 1.5rem auto;
+      text-align: center; } }
   .nav-link-text {
     padding: 0.5rem 3rem;
     transition: all 0.6s;
     display: block;
     border-radius: 10px;
     font-size: 1.6rem; }
+    @media (max-width: 56.25em) {
+      .nav-link-text {
+        font-size: 2.5rem; } }
     .nav-link-text:link, .nav-link-text:visited {
       text-decoration: none;
       font-family: "Courier New", Courier, monospace;
       color: #fff;
       background-size: 100%; }
-    .nav-link-text:hover {
-      background-image: linear-gradient(-120deg, transparent 0%, transparent 50%, #fff 50%, #fff 100%);
-      background-size: 250%;
-      color: #00b09b;
-      transform: translateX(3px); }
+    @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+      .nav-link-text:active {
+        color: #000;
+        transform: scale(1.5); } }
+    @media only screen and (min-width: 56.25em), only screen and (hover: fine) {
+      .nav-link-text:hover {
+        background-image: linear-gradient(-120deg, transparent 0%, transparent 50%, #fff 50%, #fff 100%);
+        background-size: 250%;
+        color: #00b09b;
+        transform: translateX(3px); } }
 
 .nav-input {
   display: none; }
@@ -1261,6 +1288,12 @@ body {
     width: 23%;
     z-index: 2000;
     display: block; }
+    @media (max-width: 37.5em) {
+      .nav-input:checked ~ .nav-links {
+        width: 37%; } }
+    @media (max-width: 31.25em) {
+      .nav-input:checked ~ .nav-links {
+        width: 33%; } }
   .nav-input:checked + .nav-label .nav-icon {
     background-color: transparent; }
   .nav-input:checked + .nav-label .nav-icon::after {
@@ -1281,6 +1314,24 @@ body {
   z-index: 1000;
   cursor: pointer;
   box-shadow: 1.5rem 1.5rem 4rem rgba(0, 0, 0, 0.4); }
+  @media (max-width: 56.25em) {
+    .nav-label {
+      height: 5rem;
+      width: 5rem;
+      top: 5rem;
+      right: 4rem; } }
+  @media (max-width: 37.5em) {
+    .nav-label {
+      height: 5rem;
+      width: 5rem;
+      top: 4rem;
+      right: 2rem; } }
+  @media (max-width: 31.25em) {
+    .nav-label {
+      height: 5rem;
+      width: 5rem;
+      top: 3rem;
+      right: 1rem; } }
   .nav-label:hover .nav-icon::after {
     top: -0.72rem; }
   .nav-label:hover .nav-icon::before {
