@@ -113,8 +113,11 @@ body {
     color: transparent;
     transition: all 0.2s;
 
+    @include responsive(tab-land) {
+        font-size: 1.9rem;
+    }
     @include responsive(tab-vert) {
-        font-size: 1rem;
+        font-size: 1.7rem;
     }
 
     &:hover {

@@ -1,5 +1,5 @@
 .popup {
-    background-color: rgba($--color-black, 0.85);
+    background-color: rgba($--color-black, 0.45);
     position: fixed;
     top: 0;
     left: 0;
@@ -7,6 +7,7 @@
     width: 100vw;
     z-index: 5000;
     transition: all 0.3s;
+    backdrop-filter: blur(10px);
 
     opacity: 0;
     visibility: hidden;
@@ -18,12 +19,49 @@
 
     &-box {
         @include abCenter;
+        margin: 5.5rem 0;
         background-color: $--color-white;
         width: 80%;
         border-radius: 15px;
         overflow: hidden;
         display: table;
 
+        @include responsive(tab-land) {
+            position: absolute;
+            top: 37%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            height: 50vh;
+            margin: 0;
+        }
+        @include responsive(tab-vert) {
+            position: absolute;
+            top: 37%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            height: 45vh;
+            margin: 0;
+        }
+        @include responsive(phone) {
+            position: absolute;
+            top: 37%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            height: 45vh;
+            margin: 0;
+        }
+        @include responsive(big-screen) {
+            position: absolute;
+            top: 37%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            height: 30vh;
+            margin: 0;
+        }
         &-left {
             display: table-cell;
             width: 33.33333333%;
@@ -31,6 +69,10 @@
         &-img {
             display: block;
             width: 100%;
+
+            @include responsive(tab-land) {
+                height: 25vh;
+            }
         }
         &-right {
             display: table-cell;
@@ -46,6 +88,13 @@
                 column-gap: 4rem;
                 column-rule: 2px solid $--color-gray;
                 hyphens: auto;
+
+                @include responsive(tab-land) {
+                    font-size: 1.5rem;
+                }
+                @include responsive(tab-vert) {
+                    font-size: 1.3rem;
+                }
             }
         }
     }
